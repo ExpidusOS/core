@@ -1,0 +1,15 @@
+.{
+  .name = "expidus.core",
+  .version = "0.2.0-alpha",
+  .paths = .{"."},
+  .dependencies = .{
+    .ziggybox = .{
+      .url = "https://github.com/MidstallSoftware/ziggybox/archive/b31acc96a8c996494501bcaa59e3a20862213daa.tar.gz",
+      .hash = "1220a1a98a611d1873c3615cd69726bf40f347c2e4aa37321eaef9dc2bb4171887de",
+    },
+    .runit = .{
+      .url = "https://github.com/MidstallSoftware/runit.zig/archive/2f43552e87b149cbf8e54aacfa5721978fc9bd5f.tar.gz",
+      .hash = "12208d59041492f581cc254511dd4c2159876714a99f32c50ce01acc105a44170566",
+    },
+  },
+}
