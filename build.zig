@@ -20,45 +20,16 @@ fn runAllowFail(b: *std.Build, argv: []const []const u8) ?[]const u8 {
 }
 
 pub fn build(b: *std.Build) void {
-    const target = b.standardTargetOptions(.{
-        .whitelist = &.{
-            .{
-                .cpu_arch = .aarch64,
-                .os_tag = .linux,
-                .abi = .gnu,
-            },
-            .{
-                .cpu_arch = .aarch64,
-                .os_tag = .linux,
-                .abi = .musl,
-            },
-            .{
-                .cpu_arch = .x86_64,
-                .os_tag = .linux,
-                .abi = .gnu,
-            },
-            .{
-                .cpu_arch = .x86_64,
-                .os_tag = .linux,
-                .abi = .musl,
-            },
-            .{
-                .cpu_arch = .riscv64,
-                .os_tag = .linux,
-                .abi = .gnu,
-            },
-            .{
-                .cpu_arch = .riscv64,
-                .os_tag = .linux,
-                .abi = .musl,
-            },
-        },
-    });
-
+    const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
+
     const variant = b.option(Variant, "variant", "System variant") orelse .core;
     const versionTag = b.option([]const u8, "version-tag", "Sets the version tag") orelse runAllowFail(b, &.{ "git", "rev-parse", "--abbrev-ref", "HEAD" }) orelse "0.2.0-alpha";
     const buildHash = b.option([]const u8, "build-hash", "Sets the build hash") orelse if (runAllowFail(b, &.{ "git", "rev-parse", "HEAD" })) |str| str[0..7] else "AAAAAAA";
+
+    if (target.result.isGnuLibC()) {
+        std.debug.panic("Target {s} is using glibc which is not supported at the moment.", .{target.result.zigTriple(b.allocator) catch @panic("OOM")});
+    }
 
     const ziggybox = b.dependency("ziggybox", .{
         .target = target,
