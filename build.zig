@@ -75,6 +75,12 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
+    b.installArtifact(runit.artifact("runsv"));
+    b.installArtifact(runit.artifact("runsvctrl"));
+    b.installArtifact(runit.artifact("runsvdir"));
+    b.installArtifact(runit.artifact("runsvstat"));
+    b.installArtifact(runit.artifact("sv"));
+
     b.getInstallStep().dependOn(&b.addInstallArtifact(runit.artifact("runit"), .{
         .dest_dir = .{
             .override = .{

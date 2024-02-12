@@ -8,8 +8,8 @@
       .hash = "1220a1a98a611d1873c3615cd69726bf40f347c2e4aa37321eaef9dc2bb4171887de",
     },
     .runit = .{
-      .url = "https://github.com/MidstallSoftware/runit.zig/archive/2f43552e87b149cbf8e54aacfa5721978fc9bd5f.tar.gz",
-      .hash = "12208d59041492f581cc254511dd4c2159876714a99f32c50ce01acc105a44170566",
+      .url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz",
+      .hash = "1220f401289c2aff8eb83d18fe4e3626d0ad7c6899960d50b07ed9da4f14288811c3",
     },
   },
 }
