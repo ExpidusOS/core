@@ -1,15 +1,15 @@
 .{
-  .name = "expidus.core",
-  .version = "0.2.0-alpha",
-  .paths = .{"."},
-  .dependencies = .{
-    .ziggybox = .{
-      .url = "https://github.com/MidstallSoftware/ziggybox/archive/b31acc96a8c996494501bcaa59e3a20862213daa.tar.gz",
-      .hash = "1220a1a98a611d1873c3615cd69726bf40f347c2e4aa37321eaef9dc2bb4171887de",
+    .name = "expidus.core",
+    .version = "0.2.0-alpha",
+    .paths = .{"."},
+    .dependencies = .{
+        .ziggybox = .{
+            .url = "https://github.com/MidstallSoftware/ziggybox/archive/a630e4f28cb56433c6d9aafaadc7ba9302be8caa.tar.gz",
+            .hash = "122028ec41fa0fb4080763ce6fecf496125fb97b1d12b16f9ad6c15b8bdcffcd3bb3",
+        },
+        .runit = .{
+            .url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz",
+            .hash = "1220f401289c2aff8eb83d18fe4e3626d0ad7c6899960d50b07ed9da4f14288811c3",
+        },
     },
-    .runit = .{
-      .url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz",
-      .hash = "1220f401289c2aff8eb83d18fe4e3626d0ad7c6899960d50b07ed9da4f14288811c3",
-    },
-  },
 }
