@@ -2,10 +2,12 @@ const std = @import("std");
 
 pub const Variant = enum {
     core,
+    devkit,
 
     pub fn name(self: Variant) []const u8 {
         return switch (self) {
             .core => "Core",
+            .devkit => "DevKit",
         };
     }
 };
