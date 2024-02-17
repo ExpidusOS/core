@@ -27,6 +27,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
+    const linkage = b.option(std.Build.Step.Compile.Linkage, "linkage", "whether to statically or dynamically link the library") orelse .static;
     const variant = b.option(Variant, "variant", "System variant") orelse .core;
     const versionTag = b.option([]const u8, "version-tag", "Sets the version tag") orelse runAllowFail(b, &.{ "git", "rev-parse", "--abbrev-ref", "HEAD" }) orelse "0.2.0-alpha";
     const buildHash = b.option([]const u8, "build-hash", "Sets the build hash") orelse if (runAllowFail(b, &.{ "git", "rev-parse", "HEAD" })) |str| str[0..7] else "AAAAAAA";
@@ -38,6 +39,7 @@ pub fn build(b: *std.Build) void {
     const ziggybox = b.dependency("ziggybox", .{
         .target = target,
         .optimize = optimize,
+        .linkage = linkage,
     });
 
     for (ziggybox.builder.install_tls.step.dependencies.items) |dep_step| {
@@ -71,6 +73,15 @@ pub fn build(b: *std.Build) void {
             },
         },
     }).step);
+
+    const dbus = b.dependency("dbus", .{
+        .target = target,
+        .optimize = optimize,
+        .linkage = linkage,
+    });
+
+    if (linkage == .dynamic) b.installArtifact(dbus.artifact("dbus-1"));
+    b.installArtifact(dbus.artifact("dbus-daemon"));
 
     const files = b.addWriteFiles();
 

@@ -11,5 +11,9 @@
             .url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz",
             .hash = "1220f401289c2aff8eb83d18fe4e3626d0ad7c6899960d50b07ed9da4f14288811c3",
         },
+        .dbus = .{
+            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/ac63520fee769bc53605499de1f288ff208cdea3.tar.gz",
+            .hash = "1220d6b7ed1f334fcf877d01d45e360c2286229dc2deb83218c922df5c83c495fef6",
+        },
     },
 }
