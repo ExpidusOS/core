@@ -12,8 +12,8 @@
             .hash = "1220f401289c2aff8eb83d18fe4e3626d0ad7c6899960d50b07ed9da4f14288811c3",
         },
         .dbus = .{
-            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/ac63520fee769bc53605499de1f288ff208cdea3.tar.gz",
-            .hash = "1220d6b7ed1f334fcf877d01d45e360c2286229dc2deb83218c922df5c83c495fef6",
+            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/3c30771ed26a48f8794715b3db72855fce51ca12.tar.gz",
+            .hash = "12209c4f1ce44012e21573ae18046be3dbb51d1bf58e768128309f8b01eacc051585",
         },
     },
 }
