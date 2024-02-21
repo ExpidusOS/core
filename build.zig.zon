@@ -4,8 +4,8 @@
     .paths = .{"."},
     .dependencies = .{
         .ziggybox = .{
-            .url = "https://github.com/MidstallSoftware/ziggybox/archive/a630e4f28cb56433c6d9aafaadc7ba9302be8caa.tar.gz",
-            .hash = "122028ec41fa0fb4080763ce6fecf496125fb97b1d12b16f9ad6c15b8bdcffcd3bb3",
+            .url = "https://github.com/MidstallSoftware/ziggybox/archive/b56774a0097b33181fe9707e5bfb62d047bcbfa1.tar.gz",
+            .hash = "1220e2e014950973314e9bcee7375ea5248270d4f5761d39d3db3760d20a351d599a",
         },
         .runit = .{
             .url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz",
