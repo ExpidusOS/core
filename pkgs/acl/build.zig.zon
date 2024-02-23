@@ -1,0 +1,19 @@
+.{
+    .name = "expidus.pkgs.acl",
+    .version = "2.3.2",
+    .paths = .{"."},
+    .dependencies = .{
+        .pkgbuild = .{
+            .url = "https://github.com/ExpidusOS/pkgbuild/archive/18ced610bf2e0fd102b45ecd885c683fd504e312.tar.gz",
+            .hash = "12202eb14542007cd097b12fec91994575c89fff4177fc126ebf1240e9758dc758a4",
+        },
+        .acl = .{
+            .url = "https://nongnu.askapache.com/acl/acl-2.3.2.tar.gz",
+            .hash = "1220b1d1c438cfdf381a5439ed9744c568d4bcf2242bc21232c8e73db451ab1f5562",
+        },
+        .attr = .{
+            .url = "../attr",
+            .hash = "1220eb1bf36cc5527be8aeb773f742f6f18606a3bfe327f84c02c0e64aa75b83963b",
+        },
+    },
+}

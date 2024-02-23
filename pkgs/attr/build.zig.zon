@@ -1,0 +1,15 @@
+.{
+    .name = "expidus.pkgs.attr",
+    .version = "2.5.2",
+    .paths = .{"."},
+    .dependencies = .{
+        .pkgbuild = .{
+            .url = "https://github.com/ExpidusOS/pkgbuild/archive/18ced610bf2e0fd102b45ecd885c683fd504e312.tar.gz",
+            .hash = "12202eb14542007cd097b12fec91994575c89fff4177fc126ebf1240e9758dc758a4",
+        },
+        .attr = .{
+            .url = "https://nongnu.askapache.com/attr/attr-2.5.2.tar.gz",
+            .hash = "1220662abc88111ae6702cea73c00f9a9adfef0fd8ded755c5e69bf83a1f60a74fed",
+        },
+    },
+}

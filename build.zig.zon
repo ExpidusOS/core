@@ -7,13 +7,17 @@
             .url = "https://github.com/MidstallSoftware/ziggybox/archive/b56774a0097b33181fe9707e5bfb62d047bcbfa1.tar.gz",
             .hash = "1220e2e014950973314e9bcee7375ea5248270d4f5761d39d3db3760d20a351d599a",
         },
-        .runit = .{
-            .url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz",
-            .hash = "1220f401289c2aff8eb83d18fe4e3626d0ad7c6899960d50b07ed9da4f14288811c3",
+        .pkgbuild = .{
+            .url = "https://github.com/ExpidusOS/pkgbuild/archive/1040e6f74b6b6a79639876f6b02b9f40775d2303.tar.gz",
+            .hash = "122075bf1b680cb1fd8550740578ca47e3e08328cca1532bcc38f5854e390e030f26",
         },
-        .dbus = .{
-            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/3c30771ed26a48f8794715b3db72855fce51ca12.tar.gz",
-            .hash = "12209c4f1ce44012e21573ae18046be3dbb51d1bf58e768128309f8b01eacc051585",
+        .build = .{
+            .url = "https://github.com/ExpidusOS/build/archive/aab78d6bd30004e002361dc5e66c090719bb88a7.tar.gz",
+            .hash = "1220fe80f8f80b02213a1aa25d000f65fc889e8f8e39d0a0344a35caaef9c1b35bb7",
+        },
+        .@"pkgs/acl" = .{
+            .url = "./pkgs/acl",
+            .hash = "1220e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         },
     },
 }
