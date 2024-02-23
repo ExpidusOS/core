@@ -12,10 +12,12 @@
             .hash = "1220fe80f8f80b02213a1aa25d000f65fc889e8f8e39d0a0344a35caaef9c1b35bb7",
         },
         .@"pkgs/acl" = .{
-            .path = "./pkgs/acl",
+            .url = "https://github.com/MidstallSoftware/acl.zig/archive/dcdaccaeb281f82c7715f17f8250cc7d01c475a5.tar.gz",
+            .hash = "1220f16070c01a83dadefe5ee9a983c5908bd418e36e0f17fbf97e8315d028897f8f",
         },
         .@"pkgs/attr" = .{
-            .path = "./pkgs/attr",
+            .url = "https://github.com/MidstallSoftware/attr.zig/archive/475154966e342d69a91d78f600beb2136315c3e8.tar.gz",
+            .hash = "12206ae9ce0671d93054f82524b04098439fbee8f3a906732acc9aaa2acff5206e4c",
         },
         .@"pkgs/ziggybox" = .{
             .url = "https://github.com/MidstallSoftware/ziggybox/archive/b56774a0097b33181fe9707e5bfb62d047bcbfa1.tar.gz",
