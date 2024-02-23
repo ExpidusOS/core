@@ -58,6 +58,9 @@ pub fn build(b: *std.Build) !void {
         },
     });
 
+    lib.expect_errors = .{ .contains = "" };
+    lib.version_script = source.path("exports");
+
     lib.addIncludePath(source.path("include"));
     lib.addIncludePath(headers.getDirectory());
     lib.addConfigHeader(configHeader);
