@@ -12,8 +12,7 @@
             .hash = "1220b1d1c438cfdf381a5439ed9744c568d4bcf2242bc21232c8e73db451ab1f5562",
         },
         .attr = .{
-            .url = "../attr",
-            .hash = "1220eb1bf36cc5527be8aeb773f742f6f18606a3bfe327f84c02c0e64aa75b83963b",
+            .path = "../attr",
         },
     },
 }

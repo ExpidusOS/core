@@ -2,7 +2,20 @@ const std = @import("std");
 const Build = @import("build");
 const Pkgbuild = @import("pkgbuild");
 
-pub fn build(b: *std.Build) void {
+pub const VendorMeta = struct {
+    name: []const u8,
+    url: []const u8,
+};
+
+fn addPackage(b: *std.Build, name: []const u8, args: anytype) void {
+    const pkgDep = b.dependency(b.fmt("pkgs/{s}", .{name}), args);
+
+    pkgDep.builder.resolveInstallPrefix(b.install_prefix, .{});
+    pkgDep.builder.install_tls.step.name = b.fmt("install {s}", .{name});
+    b.getInstallStep().dependOn(&pkgDep.builder.install_tls.step);
+}
+
+pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
@@ -10,28 +23,45 @@ pub fn build(b: *std.Build) void {
     const variant = b.option(Build.Variant, "variant", "System variant") orelse .core;
     const versionTag = b.option([]const u8, "version-tag", "Sets the version tag") orelse Build.runAllowFailSingleLine(b, &.{ "git", "rev-parse", "--abbrev-ref", "HEAD" }) orelse "0.2.0-alpha";
     const buildHash = b.option([]const u8, "build-hash", "Sets the build hash") orelse if (Build.runAllowFailSingleLine(b, &.{ "git", "rev-parse", "HEAD" })) |str| str[0..7] else "AAAAAAA";
+    const vendorPath = b.option([]const u8, "vendor", "Path to the vendor metadata and other files") orelse b.pathFromRoot("vendor/midstall");
 
     if (target.result.isGnuLibC()) {
         std.debug.panic("Target {s} is using glibc which is not supported at the moment.", .{target.result.zigTriple(b.allocator) catch @panic("OOM")});
     }
 
-    const ziggybox = b.dependency("ziggybox", .{
+    inline for (@as([]const []const u8, &.{
+        "acl",
+        "attr",
+        "dbus",
+        "libaudit",
+        "libcap-ng",
+        "ziggybox",
+    })) |pkgName| {
+        addPackage(b, pkgName, .{
+            .target = target,
+            .optimize = optimize,
+            .linkage = linkage,
+        });
+    }
+
+    addPackage(b, "runit", .{
         .target = target,
         .optimize = optimize,
-        .linkage = linkage,
     });
 
-    ziggybox.builder.resolveInstallPrefix(b.install_prefix, .{});
-    b.getInstallStep().dependOn(&ziggybox.builder.install_tls.step);
+    const vendorMeta = blk: {
+        const path = b.pathJoin(&.{ vendorPath, "meta.json" });
 
-    const acl = b.dependency("pkgs/acl", .{
-        .target = target,
-        .optimize = optimize,
-        .linkage = linkage,
-    });
+        var file = if (std.fs.path.isAbsolute(path)) try std.fs.openFileAbsolute(path, .{}) else try std.fs.cwd().openFile(path, .{});
+        defer file.close();
 
-    acl.builder.resolveInstallPrefix(b.install_prefix, .{});
-    b.getInstallStep().dependOn(&acl.builder.install_tls.step);
+        const meta = try file.metadata();
+        const str = try file.readToEndAlloc(b.allocator, meta.size());
+        defer b.allocator.free(str);
+
+        break :blk try std.json.parseFromSlice(VendorMeta, b.allocator, str, .{ .allocate = .alloc_always });
+    };
+    defer vendorMeta.deinit();
 
     const files = b.addWriteFiles();
 
@@ -49,6 +79,8 @@ pub fn build(b: *std.Build) void {
         \\BUG_REPORT_URL=https://github.com/ExpidusOS/core/issues
         \\ARCHITECTURE={s}
         \\DEFAULT_HOSTNAME=expidus-{s}
+        \\VENDOR_NAME="{s}"
+        \\VENDOR_URL={s}
         \\
     , .{
         variant.name(),
@@ -60,5 +92,7 @@ pub fn build(b: *std.Build) void {
         buildHash,
         @tagName(target.result.cpu.arch),
         @tagName(variant),
+        vendorMeta.value.name,
+        vendorMeta.value.url,
     })), .prefix, "etc/os-release").step);
 }

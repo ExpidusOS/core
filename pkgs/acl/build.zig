@@ -14,7 +14,10 @@ pub fn build(b: *std.Build) !void {
     });
 
     const configHeader = b.addConfigHeader(.{}, .{
+        .ENABLE_NLS = 1,
         .HAVE_ATTR_ERROR_CONTEXT_H = 1,
+        .HAVE_LIBACL_LIBACL_H = 1,
+        .HAVE_ACL_LIBACL_H = 1,
         .HAVE_ACL_ENTRIES = 1,
         .HAVE_ACL_GET_ENTRY = 1,
         .HAVE_ACL_FREE = 1,
@@ -30,6 +33,7 @@ pub fn build(b: *std.Build) !void {
         .HAVE_STDLIB_H = 1,
         .HAVE_STRINGS_H = null,
         .HAVE_STRING_H = 1,
+        .HAVE_SYS_ACL_H = 1,
         .HAVE_SYS_STAT_H = 1,
         .HAVE_SYS_TYPES_H = 1,
         .HAVE_UNISTD_H = 1,

@@ -3,10 +3,6 @@
     .version = "0.2.0-alpha",
     .paths = .{"."},
     .dependencies = .{
-        .ziggybox = .{
-            .url = "https://github.com/MidstallSoftware/ziggybox/archive/b56774a0097b33181fe9707e5bfb62d047bcbfa1.tar.gz",
-            .hash = "1220e2e014950973314e9bcee7375ea5248270d4f5761d39d3db3760d20a351d599a",
-        },
         .pkgbuild = .{
             .url = "https://github.com/ExpidusOS/pkgbuild/archive/1040e6f74b6b6a79639876f6b02b9f40775d2303.tar.gz",
             .hash = "122075bf1b680cb1fd8550740578ca47e3e08328cca1532bcc38f5854e390e030f26",
@@ -16,8 +12,30 @@
             .hash = "1220fe80f8f80b02213a1aa25d000f65fc889e8f8e39d0a0344a35caaef9c1b35bb7",
         },
         .@"pkgs/acl" = .{
-            .url = "./pkgs/acl",
-            .hash = "1220e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            .path = "./pkgs/acl",
+        },
+        .@"pkgs/attr" = .{
+            .path = "./pkgs/attr",
+        },
+        .@"pkgs/ziggybox" = .{
+            .url = "https://github.com/MidstallSoftware/ziggybox/archive/b56774a0097b33181fe9707e5bfb62d047bcbfa1.tar.gz",
+            .hash = "1220e2e014950973314e9bcee7375ea5248270d4f5761d39d3db3760d20a351d599a",
+        },
+        .@"pkgs/libaudit" = .{
+            .url = "https://github.com/MidstallSoftware/libaudit.zig/archive/1e0f394fba48db1635fa18e3d46164970c556e83.tar.gz",
+            .hash = "12209af9de10cb22a37b3d26c01e467bc0086c569837b34b35048e0975ed701ad2fe",
+        },
+        .@"pkgs/libcap-ng" = .{
+            .url = "https://github.com/MidstallSoftware/libcap-ng.zig/archive/4f7e4294472368d1cd9bd9a14c65c824e740503d.tar.gz",
+            .hash = "1220470e48999989b87360b808d5617d491278e9b9d4a6fd96d1ee1f183577dd5dac",
+        },
+        .@"pkgs/dbus" = .{
+            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/f1de41f5d1cd1b666189f5cb08249e80fbe83d78.tar.gz",
+            .hash = "1220efd95ebce30c67d1acb1b7769da37223ba4610c3ed7df7cb5238a1c0ac19cdbf",
+        },
+        .@"pkgs/runit" = .{
+            .url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz",
+            .hash = "1220f401289c2aff8eb83d18fe4e3626d0ad7c6899960d50b07ed9da4f14288811c3",
         },
     },
 }
