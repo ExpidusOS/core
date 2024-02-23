@@ -259,16 +259,16 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1708718468,
-        "narHash": "sha256-RjDcagglKOBKH9v7HcEXN1puPxlmB0+3Y6R906XVJL0=",
+        "lastModified": 1708719413,
+        "narHash": "sha256-ow/4w6dV2fpi/dY2SHksDg2pZZwam3dH29bCyR92pmI=",
         "owner": "MidstallSoftware",
         "repo": "zon2nix",
-        "rev": "d4f04fdecac0fa39c14368a6fa9e45eb2fd4521a",
+        "rev": "6a318f018256ffe3ba2d504fa70c386b759cd035",
         "type": "github"
       },
       "original": {
         "owner": "MidstallSoftware",
-        "ref": "fix/zig-master",
+        "ref": "expidus",
         "repo": "zon2nix",
         "type": "github"
       }

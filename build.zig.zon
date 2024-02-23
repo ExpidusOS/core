@@ -39,5 +39,21 @@
             .url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz",
             .hash = "1220f401289c2aff8eb83d18fe4e3626d0ad7c6899960d50b07ed9da4f14288811c3",
         },
+        .@"pkgs/selinux" = .{
+            .url = "https://github.com/MidstallSoftware/selinux.zig/archive/8f70d59c6f1239e165ade8d46c679124b1cced69.tar.gz",
+            .hash = "1220ee07f7563df59f3a1db7bb74498c44318e7eedd0abff05a20fa786bd03b6de74",
+        },
+        .@"pkgs/pcre2" = .{
+            .url = "https://github.com/PCRE2Project/pcre2/archive/589fea34c87a43d5d6521b3bc3f890f00aaa557b.tar.gz",
+            .hash = "1220500af520622a629c3e424ca786880361f6ad229078f6ce5f4905c8d2d2d8effb",
+        },
+        .@"pkgs/python" = .{
+            .url = "https://github.com/MidstallSoftware/python.zig/archive/e30fade3dce443f110399b9e04f867eb3b7df364.tar.gz",
+            .hash = "1220cd6e19dc1bf38fbbd5bdbfe0344bbb84323afa5521294262be98276acdf44b45",
+        },
+        .@"pkgs/apparmor" = .{
+            .url = "https://github.com/MidstallSoftware/apparmor.zig/archive/6c694a3080d8ff15045ff0d2e8686710dfddb759.tar.gz",
+            .hash = "122077c813b5bcc473f67be4978f2730ca201cc6f13b0a26aa5a05265676bccc9a3e",
+        },
     },
 }

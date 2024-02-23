@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
     toolchain.url = "github:ExpidusOS/toolchain";
-    zon2nix.url = "github:MidstallSoftware/zon2nix/fix/zig-master";
+    zon2nix.url = "github:MidstallSoftware/zon2nix/expidus";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -58,7 +58,10 @@
             dontInstall = true;
 
             buildPhase = ''
+              export ZIG_GLOBAL_CACHE_DIR=$(pwd)/.cache
               mkdir -p .cache
+              ln -s ${pkgs.callPackage ./deps.nix { }} .cache/p
+
               zig build install --cache-dir $(pwd)/zig-cache --global-cache-dir $(pwd)/.cache \
                 -Dbuild-hash=${self.shortRev or "dirty"} \
                 -Dcpu=baseline \
