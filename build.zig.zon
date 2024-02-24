@@ -28,12 +28,12 @@
             .hash = "12209af9de10cb22a37b3d26c01e467bc0086c569837b34b35048e0975ed701ad2fe",
         },
         .@"pkgs/libcap-ng" = .{
-            .url = "https://github.com/MidstallSoftware/libcap-ng.zig/archive/4f7e4294472368d1cd9bd9a14c65c824e740503d.tar.gz",
-            .hash = "1220470e48999989b87360b808d5617d491278e9b9d4a6fd96d1ee1f183577dd5dac",
+            .url = "https://github.com/MidstallSoftware/libcap-ng.zig/archive/a754e5adc8ae4f0b8ec25a481dd07250d445ba57.tar.gz",
+            .hash = "1220e1dea1b8b34378a88c991166cd3941fc0f77bbc19fbbf8dbeb34c91d88ba39c8",
         },
         .@"pkgs/dbus" = .{
-            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/f1de41f5d1cd1b666189f5cb08249e80fbe83d78.tar.gz",
-            .hash = "1220efd95ebce30c67d1acb1b7769da37223ba4610c3ed7df7cb5238a1c0ac19cdbf",
+            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/b8dd40c183c3a9d3c95f8da1625522826b7f84e3.tar.gz",
+            .hash = "1220280aae5b2b8d9e9a42ed95b5199841eed9001227170319d0dc053a11564d52bc",
         },
         .@"pkgs/runit" = .{
             .url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz",
@@ -54,6 +54,10 @@
         .@"pkgs/apparmor" = .{
             .url = "https://github.com/MidstallSoftware/apparmor.zig/archive/6c694a3080d8ff15045ff0d2e8686710dfddb759.tar.gz",
             .hash = "122077c813b5bcc473f67be4978f2730ca201cc6f13b0a26aa5a05265676bccc9a3e",
+        },
+        .libaudit = .{
+            .url = "https://github.com/MidstallSoftware/libaudit.zig/archive/e2c84af1bf0cf8b480e740767de544f131584909.tar.gz",
+            .hash = "1220791eba56a7505adcac7222def518f1434a937ae529572467b8fd2ea72dbb8005",
         },
     },
 }

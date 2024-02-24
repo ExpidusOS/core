@@ -11,6 +11,13 @@ linkFarm "zig-packages" [
     };
   }
   {
+    name = "1220280aae5b2b8d9e9a42ed95b5199841eed9001227170319d0dc053a11564d52bc";
+    path = fetchzip {
+      url = "https://github.com/MidstallSoftware/dbus.zig/archive/b8dd40c183c3a9d3c95f8da1625522826b7f84e3.tar.gz";
+      hash = "sha256-KQjcN0rGngPDAiTPR6eRqY3EaqZa1rLhAMSTXACh5fE=";
+    };
+  }
+  {
     name = "12202eb14542007cd097b12fec91994575c89fff4177fc126ebf1240e9758dc758a4";
     path = fetchzip {
       url = "https://github.com/ExpidusOS/pkgbuild/archive/18ced610bf2e0fd102b45ecd885c683fd504e312.tar.gz";
@@ -102,6 +109,13 @@ linkFarm "zig-packages" [
     };
   }
   {
+    name = "1220791eba56a7505adcac7222def518f1434a937ae529572467b8fd2ea72dbb8005";
+    path = fetchzip {
+      url = "https://github.com/MidstallSoftware/libaudit.zig/archive/e2c84af1bf0cf8b480e740767de544f131584909.tar.gz";
+      hash = "sha256-Dqq8MZiybKSQ6Tflg/UpluXpXYYtxO/5QI+LOVM/X/c=";
+    };
+  }
+  {
     name = "12207a76b79a7399a3937c1d5f67b00f85b360086f83e5f032a7525912d15f4e5910";
     path = fetchzip {
       url = "https://github.com/MidstallSoftware/cpython/archive/5fcfcab85bdef583263126ab98d49921c812ec15.tar.gz";
@@ -183,13 +197,6 @@ linkFarm "zig-packages" [
     path = fetchzip {
       url = "https://github.com/MidstallSoftware/selinux.zig/archive/8f70d59c6f1239e165ade8d46c679124b1cced69.tar.gz";
       hash = "sha256-+sHAf+UdHgA0xJ/s7Qyv+OpBa8ZX7HyOdm/29M1izCY=";
-    };
-  }
-  {
-    name = "1220efd95ebce30c67d1acb1b7769da37223ba4610c3ed7df7cb5238a1c0ac19cdbf";
-    path = fetchzip {
-      url = "https://github.com/MidstallSoftware/dbus.zig/archive/f1de41f5d1cd1b666189f5cb08249e80fbe83d78.tar.gz";
-      hash = "sha256-7KvfsD2wvlsnr35VC0nXMoxc1/TC1e2KOFFsg9ohY74=";
     };
   }
   {

@@ -13,7 +13,13 @@ fn fixupRpaths(b: *std.Build, cs: *std.Build.Step.Compile) void {
             fixupRpaths(b, link_obj.other_step);
 
             if (link_obj.other_step.kind == .lib and link_obj.other_step.linkage == .dynamic) {
-                //cs.step.dependOn(link_obj.other_step.step.owner.getInstallStep());
+                for (link_obj.other_step.step.owner.getInstallStep().dependencies.items) |link_obj_dep_step| {
+                    const inst = link_obj_dep_step.cast(std.Build.Step.InstallArtifact) orelse continue;
+                    if (inst.artifact == link_obj.other_step) {
+                        cs.step.dependOn(&inst.step);
+                        break;
+                    }
+                }
 
                 link_obj.* = .{
                     .static_path = .{
@@ -49,8 +55,8 @@ pub fn build(b: *std.Build) !void {
     const vendorPath = b.option([]const u8, "vendor", "Path to the vendor metadata and other files") orelse b.pathFromRoot("vendor/midstall");
 
     inline for (@as([]const []const u8, &.{
-        "acl",
         "attr",
+        "acl",
         "libaudit",
         "libcap-ng",
         "pcre2",
