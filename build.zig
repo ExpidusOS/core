@@ -2,6 +2,22 @@ const std = @import("std");
 const Build = @import("build");
 const Pkgbuild = @import("pkgbuild");
 
+pub const Variant = enum {
+    core,
+    devkit,
+    mainline,
+    bootstrap,
+
+    pub fn name(self: Variant) []const u8 {
+        return switch (self) {
+            .core => "Core",
+            .devkit => "DevKit",
+            .mainline => "Mainline",
+            .bootstrap => "Bootstrap",
+        };
+    }
+};
+
 pub const VendorMeta = struct {
     name: []const u8,
     url: []const u8,
@@ -44,12 +60,22 @@ fn addPackage(b: *std.Build, name: []const u8, args: anytype) void {
     }
 }
 
+fn access(path: []const u8, flags: std.fs.File.OpenFlags) bool {
+    if (std.fs.path.isAbsolute(path)) {
+        std.fs.accessAbsolute(path, flags) catch return false;
+        return true;
+    }
+
+    std.fs.cwd().access(path, flags) catch return false;
+    return true;
+}
+
 pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
     const linkage = b.option(std.Build.Step.Compile.Linkage, "linkage", "whether to statically or dynamically link the library") orelse @as(std.Build.Step.Compile.Linkage, if (target.result.isGnuLibC()) .dynamic else .static);
-    const variant = b.option(Build.Variant, "variant", "System variant") orelse .core;
+    const variant = b.option(Variant, "variant", "System variant") orelse .core;
     const versionTag = b.option([]const u8, "version-tag", "Sets the version tag") orelse Build.runAllowFailSingleLine(b, &.{ "git", "rev-parse", "--abbrev-ref", "HEAD" }) orelse "0.2.0-alpha";
     const buildHash = b.option([]const u8, "build-hash", "Sets the build hash") orelse if (Build.runAllowFailSingleLine(b, &.{ "git", "rev-parse", "HEAD" })) |str| str[0..7] else "AAAAAAA";
     const vendorPath = b.option([]const u8, "vendor", "Path to the vendor metadata and other files") orelse b.pathFromRoot("vendor/midstall");
@@ -93,6 +119,12 @@ pub fn build(b: *std.Build) !void {
     defer vendorMeta.deinit();
 
     const files = b.addWriteFiles();
+
+    if (access(b.pathJoin(&.{ vendorPath, "logo.png" }), .{})) {
+        b.getInstallStep().dependOn(&b.addInstallFileWithDir(files.addCopyFile(.{
+            .path = b.pathJoin(&.{ vendorPath, "logo.png" }),
+        }, "usr/share/icons/os-vendor-logo.png"), .prefix, "usr/share/icons/os-vendor-logo.png").step);
+    }
 
     b.getInstallStep().dependOn(&b.addInstallFileWithDir(files.add("etc/os-release", b.fmt(
         \\NAME="ExpidusOS"
