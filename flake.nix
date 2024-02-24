@@ -50,6 +50,8 @@
 
             src = pkgs.lib.cleanSource self;
 
+            outputs = [ "out" "dev" ];
+
             nativeBuildInputs = with pkgs; [
               expidus.toolchain
             ];
