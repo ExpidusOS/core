@@ -32,8 +32,8 @@
             .hash = "1220e1dea1b8b34378a88c991166cd3941fc0f77bbc19fbbf8dbeb34c91d88ba39c8",
         },
         .@"pkgs/dbus" = .{
-            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/b8dd40c183c3a9d3c95f8da1625522826b7f84e3.tar.gz",
-            .hash = "1220280aae5b2b8d9e9a42ed95b5199841eed9001227170319d0dc053a11564d52bc",
+            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/7970d263b6205215dbd988c9a1c31f297b17d720.tar.gz",
+            .hash = "122063afd92cafec7eeafedbc8097e1621506d7aec1a1b36b1d057b7183598971fc0",
         },
         .@"pkgs/runit" = .{
             .url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz",
