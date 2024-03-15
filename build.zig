@@ -85,6 +85,7 @@ pub fn build(b: *std.Build) !void {
         "acl",
         "libaudit",
         "libcap-ng",
+        "eudev",
         "pcre2",
         "python",
         "expat",

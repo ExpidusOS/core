@@ -28,8 +28,8 @@
             .hash = "1220405f67f78da335345bbea315ab6bab96e0f23a4c63da11852a18929113613ff7",
         },
         .@"pkgs/dbus" = .{
-            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/dce6f1f26fadcfffff83e93173156ffa17f6bb36.tar.gz",
-            .hash = "122079b355566c56c266b46a29a35681b0593369ccb6a8db4e286e07c8eef77add33",
+            .url = "https://github.com/MidstallSoftware/dbus.zig/archive/612d62bab8cc7a6231e9d619cf279b253ba369bb.tar.gz",
+            .hash = "122061e4a254b14ccb92aa3047cdb08bab8440b177cb4e4a89a5ae10de621074638d",
         },
         .@"pkgs/runit" = .{
             .url = "https://github.com/MidstallSoftware/runit.zig/archive/68e20e8063ee05bece23f66a4c7cbab5077e98f3.tar.gz",
@@ -58,6 +58,10 @@
         .@"pkgs/expat" = .{
             .url = "https://github.com/MidstallSoftware/expat.zig/archive/0b908b69f347b50a25faa29b54dd5557f050c01c.tar.gz",
             .hash = "122068333e288a0fc27813c2335aa8e2d66c37602737f572ec803f29fb7f26375ca1",
+        },
+        .@"pkgs/eudev" = .{
+            .url = "https://github.com/MidstallSoftware/eudev.zig/archive/1ff513d5db65db8e212522874cc7312929cb4ee8.tar.gz",
+            .hash = "1220f7bce5b93295c1dcb0e50ce5576280bdd59ac1899b901b741139a92fbe25e0d8",
         },
     },
 }
