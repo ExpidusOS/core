@@ -74,7 +74,7 @@ pub fn build(b: *std.Build) !void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const linkage = b.option(std.Build.Step.Compile.Linkage, "linkage", "whether to statically or dynamically link the library") orelse @as(std.Build.Step.Compile.Linkage, if (target.result.isGnuLibC()) .dynamic else .static);
+    const linkage = b.option(std.builtin.LinkMode, "linkage", "whether to statically or dynamically link the library") orelse @as(std.builtin.LinkMode, if (target.result.isGnuLibC()) .dynamic else .static);
     const variant = b.option(Variant, "variant", "System variant") orelse .core;
     const versionTag = b.option([]const u8, "version-tag", "Sets the version tag") orelse Build.runAllowFailSingleLine(b, &.{ "git", "rev-parse", "--abbrev-ref", "HEAD" }) orelse "0.2.0-alpha";
     const buildHash = b.option([]const u8, "build-hash", "Sets the build hash") orelse if (Build.runAllowFailSingleLine(b, &.{ "git", "rev-parse", "HEAD" })) |str| str[0..7] else "AAAAAAA";
@@ -87,6 +87,7 @@ pub fn build(b: *std.Build) !void {
         "libcap-ng",
         "pcre2",
         "python",
+        "expat",
         "selinux",
         "apparmor",
         "dbus",
