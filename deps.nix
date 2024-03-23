@@ -4,17 +4,24 @@
 
 linkFarm "zig-packages" [
   {
-    name = "12200bc9c46b6ddc21acbd8862d26d41c0e3302492f500ad70e9fd0421fc965e4e41";
+    name = "12200103e7b4a0cb162f2912df4fe97914024a25b5c9fcce6ea4119744f3f2a7f24e";
     path = fetchzip {
-      url = "https://github.com/MidstallSoftware/musl-fts.zig/archive/5a357938abd1ed4432130ac47a8a2c12eb424345.tar.gz";
-      hash = "sha256-iCTk+av+NRAFQOns79NSVgnwnvvFAEgCiyNb8g0xYZ4=";
+      url = "https://github.com/Hejsil/zig-clap/archive/209ba4da76e46412acfe18f711cb0b041ff37f10.tar.gz";
+      hash = "sha256-6oHwQ591KkvlDtkeX2srJKRawx+eA03OnGg3E3GCNrI=";
     };
   }
   {
-    name = "1220280aae5b2b8d9e9a42ed95b5199841eed9001227170319d0dc053a11564d52bc";
+    name = "12200a06fb7904e5c889fb166d308a2bfb68fb6ccdc935ab8aaa391f8c1f7616bc2d";
     path = fetchzip {
-      url = "https://github.com/MidstallSoftware/dbus.zig/archive/b8dd40c183c3a9d3c95f8da1625522826b7f84e3.tar.gz";
-      hash = "sha256-KQjcN0rGngPDAiTPR6eRqY3EaqZa1rLhAMSTXACh5fE=";
+      url = "https://github.com/MidstallSoftware/libaudit.zig/archive/fb23cb4cf69b2dd6b1bca09b7bfa8106db90c044.tar.gz";
+      hash = "sha256-HV7LEv9/Ja4TTR5PC46iK08YYhDULHwhvKPsfSiCqJA=";
+    };
+  }
+  {
+    name = "122014e187ac96e85a93e24ec7663bfc7a844fb6b813a448173a74e9cb069a9067ff";
+    path = fetchzip {
+      url = "https://github.com/MidstallSoftware/apparmor.zig/archive/cf38b107e6f4b82b35466233473d1a98a16601c9.tar.gz";
+      hash = "sha256-ZaVI8zm97c4Aj4z1iqY/1r1Ca+LcFy9KTyHsTYLTtkU=";
     };
   }
   {
@@ -25,24 +32,17 @@ linkFarm "zig-packages" [
     };
   }
   {
-    name = "12202fa30d679d821292bcd953458b9e76097a5d16999489125a206db63a53392833";
-    path = fetchzip {
-      url = "https://github.com/Hejsil/zig-clap/archive/4267b0b60ef6f87cccf3ee6ed481e6d0759180c6.tar.gz";
-      hash = "sha256-Wyti3pqEHFoHgD+Iny+O5S2ipe4e2Q1F/957vCKyCbU=";
-    };
-  }
-  {
-    name = "1220373131b333523a0f8515e8c1e121e19cf8c4e03a7dda36901782d76cb9376a5c";
-    path = fetchzip {
-      url = "https://github.com/MidstallSoftware/expat.zig/archive/24b51902a3fb8b9703dd1a629b51a25226a06e41.tar.gz";
-      hash = "sha256-dBFEIrR7pc71c+swXxThRpiQ22ma6eOseQaCXQSm3Go=";
-    };
-  }
-  {
     name = "12203b6e6ec7bb3b967233de8bd51524a16be5e9180dba53160c487394619cfb7626";
     path = fetchzip {
       url = "https://github.com/libexpat/libexpat/releases/download/R_2_6_0/expat-2.6.0.tar.gz";
       hash = "sha256-mEKaLL/re+jqqbZZ6+ATtjl3Gi2lqE+npXVr0Xj2D0E=";
+    };
+  }
+  {
+    name = "1220405f67f78da335345bbea315ab6bab96e0f23a4c63da11852a18929113613ff7";
+    path = fetchzip {
+      url = "https://github.com/MidstallSoftware/libcap-ng.zig/archive/3b9b2a81d817bc2e579d10a8e61327bc5c322346.tar.gz";
+      hash = "sha256-BQJ6XuaQQHBaQOdmQuHWvcVkc/n60c1cerjVH1Z1Hg4=";
     };
   }
   {
@@ -53,13 +53,6 @@ linkFarm "zig-packages" [
     };
   }
   {
-    name = "1220470e48999989b87360b808d5617d491278e9b9d4a6fd96d1ee1f183577dd5dac";
-    path = fetchzip {
-      url = "https://github.com/MidstallSoftware/libcap-ng.zig/archive/4f7e4294472368d1cd9bd9a14c65c824e740503d.tar.gz";
-      hash = "sha256-ZqTSssMiwXi4U2nFQq9rvAepIy+Azh3uIXzydqTXi5Y=";
-    };
-  }
-  {
     name = "12204c14e6f4e3481b16dd1482f1d94285ec3154a65701b767a2c062f80f62f86ce4";
     path = fetchzip {
       url = "https://gitlab.com/apparmor/apparmor/-/archive/v3.1.7/apparmor-v3.1.7.tar.gz";
@@ -67,10 +60,10 @@ linkFarm "zig-packages" [
     };
   }
   {
-    name = "1220500af520622a629c3e424ca786880361f6ad229078f6ce5f4905c8d2d2d8effb";
+    name = "12205c9afeae4b6fc701c05ea788f720af4b299c0b4c60e82cdf3a6c15c5f8a5f17b";
     path = fetchzip {
-      url = "https://github.com/PCRE2Project/pcre2/archive/589fea34c87a43d5d6521b3bc3f890f00aaa557b.tar.gz";
-      hash = "sha256-pbCskVuW9cxFYKPlR4wpsL0CFIqegDrz7mUzl/4f9PQ=";
+      url = "https://github.com/PCRE2Project/pcre2/archive/3c5ca5c1eabf64e1e0912b6c9eaa18850d4c3b40.tar.gz";
+      hash = "sha256-RlEcNcu7nv4q/Sk9OtbboWmZvhiWfKsIyDYooKG5SGI=";
     };
   }
   {
@@ -81,6 +74,13 @@ linkFarm "zig-packages" [
     };
   }
   {
+    name = "122061e4a254b14ccb92aa3047cdb08bab8440b177cb4e4a89a5ae10de621074638d";
+    path = fetchzip {
+      url = "https://github.com/MidstallSoftware/dbus.zig/archive/612d62bab8cc7a6231e9d619cf279b253ba369bb.tar.gz";
+      hash = "sha256-v8nAGI/+QJAL9nIWLLOw6jGPVvgLwrD6H89e4b3Uf0k=";
+    };
+  }
+  {
     name = "1220662abc88111ae6702cea73c00f9a9adfef0fd8ded755c5e69bf83a1f60a74fed";
     path = fetchzip {
       url = "https://nongnu.askapache.com/attr/attr-2.5.2.tar.gz";
@@ -88,31 +88,17 @@ linkFarm "zig-packages" [
     };
   }
   {
-    name = "12206ae9ce0671d93054f82524b04098439fbee8f3a906732acc9aaa2acff5206e4c";
+    name = "122068333e288a0fc27813c2335aa8e2d66c37602737f572ec803f29fb7f26375ca1";
     path = fetchzip {
-      url = "https://github.com/MidstallSoftware/attr.zig/archive/475154966e342d69a91d78f600beb2136315c3e8.tar.gz";
-      hash = "sha256-qgtziovTO6Tj7o6LyJzeKvVO213/AIdsNQZHTfAbkq8=";
+      url = "https://github.com/MidstallSoftware/expat.zig/archive/0b908b69f347b50a25faa29b54dd5557f050c01c.tar.gz";
+      hash = "sha256-YtRV8eR5MTBS7+tzy7XNk/J0PnAbWf4691zkcLHpDJU=";
     };
   }
   {
-    name = "122075bf1b680cb1fd8550740578ca47e3e08328cca1532bcc38f5854e390e030f26";
+    name = "12207490f36e8d92099ce7dce1c7076b53c02bd1f06e09c59f2531e78fbf168d73ae";
     path = fetchzip {
-      url = "https://github.com/ExpidusOS/pkgbuild/archive/1040e6f74b6b6a79639876f6b02b9f40775d2303.tar.gz";
-      hash = "sha256-x4culfJGhuynlUbje79Mv0ig3sujwVW+1JsnHT+sjqs=";
-    };
-  }
-  {
-    name = "122077c813b5bcc473f67be4978f2730ca201cc6f13b0a26aa5a05265676bccc9a3e";
-    path = fetchzip {
-      url = "https://github.com/MidstallSoftware/apparmor.zig/archive/6c694a3080d8ff15045ff0d2e8686710dfddb759.tar.gz";
-      hash = "sha256-ZEPUD8peaeaUF9h2QQklQIC6MfyhC+wljoYDhbQTYYc=";
-    };
-  }
-  {
-    name = "1220791eba56a7505adcac7222def518f1434a937ae529572467b8fd2ea72dbb8005";
-    path = fetchzip {
-      url = "https://github.com/MidstallSoftware/libaudit.zig/archive/e2c84af1bf0cf8b480e740767de544f131584909.tar.gz";
-      hash = "sha256-Dqq8MZiybKSQ6Tflg/UpluXpXYYtxO/5QI+LOVM/X/c=";
+      url = "https://github.com/eudev-project/eudev/releases/download/v3.2.14/eudev-3.2.14.tar.gz";
+      hash = "sha256-vpyV3vgwb24+NyOMhK+SVbXFM/E7mswwsXxiiFCboJo=";
     };
   }
   {
@@ -123,17 +109,24 @@ linkFarm "zig-packages" [
     };
   }
   {
+    name = "1220839da3e6999de970a44384724053d198657c638eb23e640e356b91c2640bea0f";
+    path = fetchzip {
+      url = "https://github.com/MidstallSoftware/python.zig/archive/42008343b427e049f67e5ccfdfafa9ccfb9377a5.tar.gz";
+      hash = "sha256-AH08P00auzef8SzV9HACJywhoGRsQhMbk41L//Rkrsg=";
+    };
+  }
+  {
+    name = "12208465fb9d7358265b0c9d9cd403ba77c7c6a6b0f57e48e418f2674faaf85a6a5c";
+    path = fetchzip {
+      url = "https://github.com/MidstallSoftware/attr.zig/archive/429b487f620ebc9110112310ee5cd601359fa08a.tar.gz";
+      hash = "sha256-tBOVJOIgmbpIWTt1crVw0DKwzI93j+6Ieu5d4Bpg+U0=";
+    };
+  }
+  {
     name = "122091abe3a043760a355ad8dd0d17bceade6a5352dbbc671f34f5986b95c8dacf84";
     path = fetchzip {
       url = "http://smarden.org/runit/runit-2.1.2.tar.gz";
       hash = "sha256-nnsvm9aafvYeiOu5TVdudmffu0azvmFw2f7IdWHDAqg=";
-    };
-  }
-  {
-    name = "12209af9de10cb22a37b3d26c01e467bc0086c569837b34b35048e0975ed701ad2fe";
-    path = fetchzip {
-      url = "https://github.com/MidstallSoftware/libaudit.zig/archive/1e0f394fba48db1635fa18e3d46164970c556e83.tar.gz";
-      hash = "sha256-L8HL1Qmv0kKuRbklqjrVMEr5UCnyzTRuQma+nfyILVE=";
     };
   }
   {
@@ -144,10 +137,31 @@ linkFarm "zig-packages" [
     };
   }
   {
+    name = "1220a744681704d2f2f6567dd8fac006386045db7feaf9b5ff93710104a53d21f4e0";
+    path = fetchzip {
+      url = "https://github.com/MidstallSoftware/acl.zig/archive/ab887f24096a8597aefe46fae184d268bdb9c4b1.tar.gz";
+      hash = "sha256-oJLKq/dQqVTs+j0azfSAyWAavZxnRKC5oLG3X5nUpNc=";
+    };
+  }
+  {
     name = "1220b1d1c438cfdf381a5439ed9744c568d4bcf2242bc21232c8e73db451ab1f5562";
     path = fetchzip {
       url = "https://nongnu.askapache.com/acl/acl-2.3.2.tar.gz";
       hash = "sha256-bd69t6ix9j5FqqM8Wzp8DulYOChZJSxWPiciQkbIOXc=";
+    };
+  }
+  {
+    name = "1220bd0e542ac0c2e134727ba14b3f6917c3bd72b353018e2c86cd53a7aaa41164cc";
+    path = fetchzip {
+      url = "https://github.com/MidstallSoftware/selinux.zig/archive/1e98d94f24c404739004a8c1cbe43c49e7a926b0.tar.gz";
+      hash = "sha256-h7crPBuC7mQOQ7Kf4GlG7a2RCXWJFyXAPw7CQw4LU1s=";
+    };
+  }
+  {
+    name = "1220bd52f38ea561f1fb8fde8a4531d6df55a32ad3424c5c7bd7d4ed2a10375f1611";
+    path = fetchzip {
+      url = "https://github.com/MidstallSoftware/musl-fts.zig/archive/7f7c861ec97e57bb5c73359cb277cde207efa6f9.tar.gz";
+      hash = "sha256-oXwXnFgeu3g34jk1ZCDhsOOOtsvQMXYDeOFSupb8eLE=";
     };
   }
   {
@@ -158,17 +172,17 @@ linkFarm "zig-packages" [
     };
   }
   {
+    name = "1220c7bad4620ef36b42d29e3c45d0729ee87c123d0336add17fed773df9802acf0c";
+    path = fetchzip {
+      url = "https://gitlab.midstall.com/ExpidusOS/pkgs/c3/runit/-/archive/68e20e8063ee05bece23f66a4c7cbab5077e98f3/runit-68e20e8063ee05bece23f66a4c7cbab5077e98f3.tar.gz";
+      hash = "sha256-nTWVS9zVYgAYhwrr8yFAsk7cMQSe+pHFTPmdIR5St8c=";
+    };
+  }
+  {
     name = "1220cc326574f724d468f397b7c0eebb29c143c37cfb55b0a8ff8a3f608050bab9c0";
     path = fetchzip {
       url = "https://github.com/void-linux/musl-fts/archive/refs/tags/v1.2.7.tar.gz";
       hash = "sha256-Azw5qrz6OKDcpYydE6jXzVxSM5A8oYWAztrHr+O/DOE=";
-    };
-  }
-  {
-    name = "1220cd6e19dc1bf38fbbd5bdbfe0344bbb84323afa5521294262be98276acdf44b45";
-    path = fetchzip {
-      url = "https://github.com/MidstallSoftware/python.zig/archive/e30fade3dce443f110399b9e04f867eb3b7df364.tar.gz";
-      hash = "sha256-u51vIdRUcYamozaCSsxwflnSpwXZvEJzPQ5EEIar67o=";
     };
   }
   {
@@ -179,38 +193,17 @@ linkFarm "zig-packages" [
     };
   }
   {
-    name = "1220e1dea1b8b34378a88c991166cd3941fc0f77bbc19fbbf8dbeb34c91d88ba39c8";
+    name = "1220f7bce5b93295c1dcb0e50ce5576280bdd59ac1899b901b741139a92fbe25e0d8";
     path = fetchzip {
-      url = "https://github.com/MidstallSoftware/libcap-ng.zig/archive/a754e5adc8ae4f0b8ec25a481dd07250d445ba57.tar.gz";
-      hash = "sha256-JuPUuYMghPPaY8A+tiMRXIkzO0teNc6ieRngHDyVj1k=";
+      url = "https://github.com/MidstallSoftware/eudev.zig/archive/1ff513d5db65db8e212522874cc7312929cb4ee8.tar.gz";
+      hash = "sha256-SnleygdDWnLK3DDNe1ExVBMNFZW1smxvxdIDmy8YuWU=";
     };
   }
   {
-    name = "1220e2e014950973314e9bcee7375ea5248270d4f5761d39d3db3760d20a351d599a";
+    name = "1220fbae16cdf58be8f93d0271271e4be8b734a332cf9ba7f87a8558d4ffe0afd5d7";
     path = fetchzip {
-      url = "https://github.com/MidstallSoftware/ziggybox/archive/b56774a0097b33181fe9707e5bfb62d047bcbfa1.tar.gz";
-      hash = "sha256-NB0QgiOywctpY49610WkMw5JLWv/apnjf20giQWLSIQ=";
-    };
-  }
-  {
-    name = "1220ee07f7563df59f3a1db7bb74498c44318e7eedd0abff05a20fa786bd03b6de74";
-    path = fetchzip {
-      url = "https://github.com/MidstallSoftware/selinux.zig/archive/8f70d59c6f1239e165ade8d46c679124b1cced69.tar.gz";
-      hash = "sha256-+sHAf+UdHgA0xJ/s7Qyv+OpBa8ZX7HyOdm/29M1izCY=";
-    };
-  }
-  {
-    name = "1220f16070c01a83dadefe5ee9a983c5908bd418e36e0f17fbf97e8315d028897f8f";
-    path = fetchzip {
-      url = "https://github.com/MidstallSoftware/acl.zig/archive/dcdaccaeb281f82c7715f17f8250cc7d01c475a5.tar.gz";
-      hash = "sha256-jSiGL0Ko1m3Uvx/EJ4Lm23AQKbcBMbd7eqKK8mSNaOo=";
-    };
-  }
-  {
-    name = "1220f401289c2aff8eb83d18fe4e3626d0ad7c6899960d50b07ed9da4f14288811c3";
-    path = fetchzip {
-      url = "https://github.com/MidstallSoftware/runit.zig/archive/1707804e08e44f8865b53c767489b807ff746406.tar.gz";
-      hash = "sha256-nXe4nlJGz7Wc1itPgCCB5EnGTaLNSCYrzalu+kLsZTU=";
+      url = "https://github.com/MidstallSoftware/ziggybox/archive/be469a656d19c8ceeee9001482bde89fa3575432.tar.gz";
+      hash = "sha256-O94nPxVJncEwH9okYl/h5xZHa98Egcj0ei/11lOakYE=";
     };
   }
   {

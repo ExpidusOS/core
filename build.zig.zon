@@ -3,14 +3,6 @@
     .version = "0.2.0-alpha",
     .paths = .{"."},
     .dependencies = .{
-        .pkgbuild = .{
-            .url = "https://github.com/ExpidusOS/pkgbuild/archive/1040e6f74b6b6a79639876f6b02b9f40775d2303.tar.gz",
-            .hash = "122075bf1b680cb1fd8550740578ca47e3e08328cca1532bcc38f5854e390e030f26",
-        },
-        .build = .{
-            .url = "https://github.com/ExpidusOS/build/archive/aab78d6bd30004e002361dc5e66c090719bb88a7.tar.gz",
-            .hash = "1220fe80f8f80b02213a1aa25d000f65fc889e8f8e39d0a0344a35caaef9c1b35bb7",
-        },
         .@"pkgs/acl" = .{
             .url = "https://github.com/MidstallSoftware/acl.zig/archive/ab887f24096a8597aefe46fae184d268bdb9c4b1.tar.gz",
             .hash = "1220a744681704d2f2f6567dd8fac006386045db7feaf9b5ff93710104a53d21f4e0",
@@ -32,7 +24,7 @@
             .hash = "122061e4a254b14ccb92aa3047cdb08bab8440b177cb4e4a89a5ae10de621074638d",
         },
         .@"pkgs/runit" = .{
-            .url = "https://github.com/MidstallSoftware/runit.zig/archive/68e20e8063ee05bece23f66a4c7cbab5077e98f3.tar.gz",
+            .url = "https://gitlab.midstall.com/ExpidusOS/pkgs/c3/runit/-/archive/68e20e8063ee05bece23f66a4c7cbab5077e98f3/runit-68e20e8063ee05bece23f66a4c7cbab5077e98f3.tar.gz",
             .hash = "1220c7bad4620ef36b42d29e3c45d0729ee87c123d0336add17fed773df9802acf0c",
         },
         .@"pkgs/selinux" = .{
