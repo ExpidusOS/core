@@ -21,6 +21,11 @@
             prev.zig
           ];
 
+          buildInputs = [
+            prev.stdenv.cc.cc.lib
+            prev.stdenv.cc.cc.libc_dev.out
+          ];
+
           dontConfigure = true;
           dontInstall = true;
 
