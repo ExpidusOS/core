@@ -216,11 +216,11 @@
         "zig": "zig"
       },
       "locked": {
-        "lastModified": 1711173326,
-        "narHash": "sha256-dk/3SgFMi8OzbsuY21ic0rPNmUGBzpTbqh61KRirgsM=",
+        "lastModified": 1711174201,
+        "narHash": "sha256-GVKKX+MTiP8CTXAatU0FQgFrdXlKlo4AV+X3Apa5CNQ=",
         "ref": "refs/heads/master",
-        "rev": "0076a2cc6417b1621c6b2a4a907f7c884f0d6496",
-        "revCount": 19,
+        "rev": "4964b016de63739571648c00e92f08271ef5d4d6",
+        "revCount": 20,
         "type": "git",
         "url": "https://gitlab.midstall.com/ExpidusOS/toolchain.git"
       },
@@ -239,11 +239,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1711173293,
-        "narHash": "sha256-9fuFGL9hpKFOjqgYsf1FnImy4qVxgP3dICKRItXz8U0=",
+        "lastModified": 1711174170,
+        "narHash": "sha256-8H8uB+sMrNIN28854NYN/Y9ffym0aufHM5j77OwZMfw=",
         "ref": "expidus",
-        "rev": "4eee701b1b8818f2cd5bd281795641fdb6a9e718",
-        "revCount": 28809,
+        "rev": "3f220e78fced339b3c34f819ef6a9ef7f4a41d4d",
+        "revCount": 28811,
         "type": "git",
         "url": "https://gitlab.midstall.com/contrib/zig.git"
       },
