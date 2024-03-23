@@ -94,11 +94,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1705309234,
-        "narHash": "sha256-uNRRNRKmJyCRC/8y1RqBkqWBLM034y4qN7EprSdmgyA=",
+        "lastModified": 1710146030,
+        "narHash": "sha256-SZ5L6eA7HJ/nmkzGG7/ISclqe6oZdOZTNoesiInkXPQ=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "1ef2e671c3b0c19053962c07dbda38332dcebf26",
+        "rev": "b1d9ab70662946ef0850d488da1c9019f3a9752a",
         "type": "github"
       },
       "original": {
@@ -125,11 +125,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1710695816,
-        "narHash": "sha256-3Eh7fhEID17pv9ZxrPwCLfqXnYP006RKzSs0JptsN84=",
+        "lastModified": 1711124224,
+        "narHash": "sha256-l0zlN/3CiodvWDtfBOVxeTwYSRz93muVbXWSpaMjXxM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "614b4613980a522ba49f0d194531beddbb7220d3",
+        "rev": "56528ee42526794d413d6f244648aaee4a7b56c0",
         "type": "github"
       },
       "original": {
@@ -216,11 +216,11 @@
         "zig": "zig"
       },
       "locked": {
-        "lastModified": 1711164120,
-        "narHash": "sha256-OnFWVIfcsIx5Tj7+HGniWkb90gl3chK6PTbcky2dz4U=",
+        "lastModified": 1711171484,
+        "narHash": "sha256-fIp6XJYISSy0NdXCxlzWDUba2ct0cvWXv1Z82V/K7rs=",
         "ref": "refs/heads/master",
-        "rev": "76a677766cbb759b423ee11d34b71c00754790b0",
-        "revCount": 16,
+        "rev": "67c3c1a5222c1974d58edee9335fcb16b60057fd",
+        "revCount": 18,
         "type": "git",
         "url": "https://gitlab.midstall.com/ExpidusOS/toolchain.git"
       },
@@ -239,18 +239,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1710908590,
-        "narHash": "sha256-l8/YPWEkzJZIn0gi4fWDnUPOw2yg78qTtPnXMI9n+SQ=",
-        "owner": "ExpidusOS",
-        "repo": "zig",
-        "rev": "37647f2003b2a11e7237bfbfddeca70c15350bf5",
-        "type": "github"
+        "lastModified": 1711170565,
+        "narHash": "sha256-eZE44ylifBgQ04aDNfZo0lCg1dvGUZ6KZYOGNpqycnU=",
+        "ref": "expidus",
+        "rev": "73800486b35bffca7c48208ec7ac097fd1ac807b",
+        "revCount": 28807,
+        "type": "git",
+        "url": "https://gitlab.midstall.com/contrib/zig.git"
       },
       "original": {
-        "owner": "ExpidusOS",
         "ref": "expidus",
-        "repo": "zig",
-        "type": "github"
+        "type": "git",
+        "url": "https://gitlab.midstall.com/contrib/zig.git"
       }
     },
     "zon2nix": {
