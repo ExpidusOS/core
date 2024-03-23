@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
-    toolchain.url = "github:ExpidusOS/toolchain";
+    toolchain.url = "git+https://gitlab.midstall.com/ExpidusOS/toolchain.git";
     zon2nix.url = "github:MidstallSoftware/zon2nix/expidus";
     flake-utils.url = "github:numtide/flake-utils";
   };

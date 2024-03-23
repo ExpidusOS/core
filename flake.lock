@@ -216,17 +216,17 @@
         "zig": "zig"
       },
       "locked": {
-        "lastModified": 1710909623,
-        "narHash": "sha256-+N5J6Wu3NOvqCjDYXr95J4bVYgmSX8x5NXU9sDIjl88=",
-        "owner": "ExpidusOS",
-        "repo": "toolchain",
-        "rev": "a6e7fa3ce6daf5ad645936b269d06862b1644305",
-        "type": "github"
+        "lastModified": 1711164120,
+        "narHash": "sha256-OnFWVIfcsIx5Tj7+HGniWkb90gl3chK6PTbcky2dz4U=",
+        "ref": "refs/heads/master",
+        "rev": "76a677766cbb759b423ee11d34b71c00754790b0",
+        "revCount": 16,
+        "type": "git",
+        "url": "https://gitlab.midstall.com/ExpidusOS/toolchain.git"
       },
       "original": {
-        "owner": "ExpidusOS",
-        "repo": "toolchain",
-        "type": "github"
+        "type": "git",
+        "url": "https://gitlab.midstall.com/ExpidusOS/toolchain.git"
       }
     },
     "zig": {
