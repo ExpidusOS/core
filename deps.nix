@@ -102,6 +102,13 @@ linkFarm "zig-packages" [
     };
   }
   {
+    name = "122075bf1b680cb1fd8550740578ca47e3e08328cca1532bcc38f5854e390e030f26";
+    path = fetchzip {
+      url = "https://github.com/ExpidusOS/pkgbuild/archive/1040e6f74b6b6a79639876f6b02b9f40775d2303.tar.gz";
+      hash = "sha256-x4culfJGhuynlUbje79Mv0ig3sujwVW+1JsnHT+sjqs=";
+    };
+  }
+  {
     name = "12207a76b79a7399a3937c1d5f67b00f85b360086f83e5f032a7525912d15f4e5910";
     path = fetchzip {
       url = "https://github.com/MidstallSoftware/cpython/archive/5fcfcab85bdef583263126ab98d49921c812ec15.tar.gz";
