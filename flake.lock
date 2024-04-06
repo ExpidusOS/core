@@ -109,11 +109,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1711124224,
-        "narHash": "sha256-l0zlN/3CiodvWDtfBOVxeTwYSRz93muVbXWSpaMjXxM=",
+        "lastModified": 1712168706,
+        "narHash": "sha256-XP24tOobf6GGElMd0ux90FEBalUtw6NkBSVh/RlA6ik=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "56528ee42526794d413d6f244648aaee4a7b56c0",
+        "rev": "1487bdea619e4a7a53a4590c475deabb5a9d1bfb",
         "type": "github"
       },
       "original": {
@@ -125,11 +125,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1711124224,
-        "narHash": "sha256-l0zlN/3CiodvWDtfBOVxeTwYSRz93muVbXWSpaMjXxM=",
+        "lastModified": 1712168706,
+        "narHash": "sha256-XP24tOobf6GGElMd0ux90FEBalUtw6NkBSVh/RlA6ik=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "56528ee42526794d413d6f244648aaee4a7b56c0",
+        "rev": "1487bdea619e4a7a53a4590c475deabb5a9d1bfb",
         "type": "github"
       },
       "original": {
@@ -216,17 +216,17 @@
         "zig": "zig"
       },
       "locked": {
-        "lastModified": 1711174201,
-        "narHash": "sha256-GVKKX+MTiP8CTXAatU0FQgFrdXlKlo4AV+X3Apa5CNQ=",
+        "lastModified": 1712367220,
+        "narHash": "sha256-MpohcRl/ndE1x96clynQLcDCpcVbv7qeqKZD3jHvXgE=",
         "ref": "refs/heads/master",
-        "rev": "4964b016de63739571648c00e92f08271ef5d4d6",
-        "revCount": 20,
+        "rev": "3c05c5f864f52e3aca61fd9bd9f4ef32efd039be",
+        "revCount": 21,
         "type": "git",
-        "url": "https://gitlab.midstall.com/ExpidusOS/toolchain.git"
+        "url": "ssh://gitlab@gitlab.midstall.com/ExpidusOS/toolchain.git"
       },
       "original": {
         "type": "git",
-        "url": "https://gitlab.midstall.com/ExpidusOS/toolchain.git"
+        "url": "ssh://gitlab@gitlab.midstall.com/ExpidusOS/toolchain.git"
       }
     },
     "zig": {
@@ -239,18 +239,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1711174170,
-        "narHash": "sha256-8H8uB+sMrNIN28854NYN/Y9ffym0aufHM5j77OwZMfw=",
+        "lastModified": 1712365912,
+        "narHash": "sha256-0KbNyuSZe4SHkE/vMbFqQWrvlqcRFabvqKZtyi2vPIQ=",
         "ref": "expidus",
-        "rev": "3f220e78fced339b3c34f819ef6a9ef7f4a41d4d",
-        "revCount": 28811,
+        "rev": "d94aad397723aea9dc462e4f843265cbb696f22c",
+        "revCount": 28916,
         "type": "git",
-        "url": "https://gitlab.midstall.com/contrib/zig.git"
+        "url": "ssh://gitlab@gitlab.midstall.com/contrib/zig.git"
       },
       "original": {
         "ref": "expidus",
         "type": "git",
-        "url": "https://gitlab.midstall.com/contrib/zig.git"
+        "url": "ssh://gitlab@gitlab.midstall.com/contrib/zig.git"
       }
     },
     "zon2nix": {
